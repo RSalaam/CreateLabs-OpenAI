@@ -2,8 +2,8 @@ import GATEKEEPER from "../config/environment"
 
 const submitForCompletion = async (input) => {
     try {
-        const user_input = input;
-        const raw = JSON.stringify({ prompt: user_input, max_tokens: 20, temperature: 0 });
+      
+        const raw = JSON.stringify({ prompt: input, max_tokens: 20, temperature: 0 });
     
         const response = await fetch(
           "https://api.openai.com/v1/engines/text-davinci-001/completions",
